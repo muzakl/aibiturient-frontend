@@ -4,14 +4,127 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  background: gray;
-  overflow: hidden;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  color: white;
 }
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2f2f2f;
   max-width: 1400px;
+  padding: 25px;
+  border-radius: 10px;
+  gap: 24px;
 }
 
-span {
-  color: red;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 900px;
+}
+
+.headerSpan {
+  color: #6e6e6e;
+  text-shadow: 0 0 3px rgba(110, 110, 110, 0.6),
+    0 0 6px rgba(110, 110, 110, 0.4);
+  animation: gentleGlow 2s infinite alternate;
+}
+
+@keyframes gentleGlow {
+  0% {
+    text-shadow: 0 0 2px rgba(110, 110, 110, 0.4),
+      0 0 4px rgba(110, 110, 110, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 3px rgba(110, 110, 110, 0.6),
+      0 0 6px rgba(110, 110, 110, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(110, 110, 110, 0.4),
+      0 0 4px rgba(110, 110, 110, 0.3);
+  }
+}
+
+.pointsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  height: 250px;
+}
+
+.point {
+  display: flex;
+  padding: 12px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  background: #6e6e6e;
+  gap: 5px;
+  height: 100%;
+  max-width: 216px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.point::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(90deg, #1a1a1a, white, #1a1a1a);
+  background-size: 200% 100%;
+  animation: borderChase 2s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  z-index: -1;
+}
+
+@keyframes borderChase {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.footerText {
+  max-width: 900px;
+}
+
+.footerSpan {
+  font-weight: bold;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #d3d3d3;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
