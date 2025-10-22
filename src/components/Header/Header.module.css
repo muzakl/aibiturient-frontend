@@ -1,0 +1,40 @@
+.headerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  top: 0;
+}
+
+.headerText {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.headerText:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.headerSpan {
+  color: #6e6e6e;
+  text-shadow: 0 0 3px rgba(110, 110, 110, 0.6),
+    0 0 6px rgba(110, 110, 110, 0.4);
+  animation: gentleGlow 2s infinite alternate;
+}
+
+.profileButton {
+  border: none;
+  background: white;
+  border-radius: 99px;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profileButton:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
