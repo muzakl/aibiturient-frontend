@@ -1,4 +1,5 @@
 import styles from './LandingPage.module.css'
+import { Link } from 'react-router'
 
 const LandingPage = () => {
   return (
@@ -53,7 +54,9 @@ const LandingPage = () => {
             რადგან ყველა სტუდენტი იმსახურებს წარმატების შანსს.
           </span>
         </p>
-        <button>შემოგვიერთდით</button>
+        <Link to="/home" className={styles.link}>
+          შემოგვიერთდით
+        </Link>
       </div>
     </div>
   )
