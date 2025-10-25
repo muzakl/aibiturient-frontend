@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from '../../components/Header/Header'
 import styles from './LessonPage.module.css'
+import ChatBox from '../../components/ChatBox/ChatBox'
 
 const LessonPage = () => {
   const [activeTab, setActiveTab] = useState(1)
@@ -26,8 +27,10 @@ const LessonPage = () => {
               className={`${activeTab === 2 ? styles.active : ''}`}
             >
               Hello
+              {/* This is temporary and needs to be changed with Test page probably. */}
             </h2>
           </div>
+          {activeTab === 1 ? <ChatBox /> : null}
         </div>
       </div>
     </div>
