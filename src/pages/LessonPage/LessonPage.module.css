@@ -1,0 +1,75 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
+  color: white;
+  background-color: #1a1a1a;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  color: white;
+}
+
+.contentDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.lessonTitle {
+  padding: 50px 0;
+}
+
+.lessonHolder {
+  width: 100%;
+  height: 100%;
+  background: #d3d3d3;
+  border-radius: 10px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lessonTabHolder {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lessonTabHolder h2 {
+  position: relative;
+  color: #1a1a1a;
+  cursor: pointer;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.lessonTabHolder h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #1a1a1a;
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.lessonTabHolder h2:hover::after {
+  opacity: 0.5;
+}
+
+.lessonTabHolder h2.active::after {
+  opacity: 1;
+}
